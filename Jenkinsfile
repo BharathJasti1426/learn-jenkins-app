@@ -11,11 +11,11 @@ pipeline {
             }
             steps {
                 sh '''
-                    ls -la
-                    node --version
-                    npm --version
-                    npm ci
-                    npm run build
+                    # ls -la
+                    # node --version
+                    # npm --version
+                    # npm ci
+                    # npm run build
                     ls -la
                 '''
             }
@@ -24,7 +24,8 @@ pipeline {
             steps {
                 sh '''
                     echo 'Test Stage'
-                    ls learn-jenkins-app/public | grep "index.html"
+                    pwd
+                    # ls learn-jenkins-app/public | grep "index.html"
                 '''
             }
         }
