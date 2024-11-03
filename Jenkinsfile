@@ -10,21 +10,21 @@ pipeline {
                 }
             }
             steps {
-                sh '''
+                /* sh '''
                     ls -la
                     node --version
                     npm --version
                     npm ci
                     npm run build
                     ls -la
-                '''
+                '''*/
             }
         }
         stage('Test') {
             steps {
                 sh '''
                     echo 'Test Stage'
-                    ls learn-jenkins-app/public/index.html | grep "index.html"
+                    ls learn-jenkins-app/public | grep "index.html"
                 '''
             }
         }
