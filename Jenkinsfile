@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                     echo 'Test Stage'
-                    grep "index.html"
+                    ls learn-jenkins-app/public/index.html | grep "index.html"
                 '''
             }
         }
