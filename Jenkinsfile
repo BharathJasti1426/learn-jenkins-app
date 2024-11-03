@@ -26,6 +26,7 @@ pipeline {
                     echo 'Test Stage'
                     pwd
                     ls public | grep "index.html"
+                    npm test
                 '''
             }
         }
