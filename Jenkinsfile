@@ -31,7 +31,8 @@ pipeline {
                 sh '''
                     echo 'Test Stage'
                     pwd
-                    ls build | grep "index.html"
+                    # ls build | grep "index.html"
+                    test -f build/index.html
                     npm test
                 '''
             }
